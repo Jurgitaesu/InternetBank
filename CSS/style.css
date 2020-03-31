@@ -1,0 +1,18 @@
+  .cover-photo {
+      background-image: url(../IMG/cover_photo.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 20em;
+  }
+
+  .false {
+      color: red;
+  }
+
+  .true {
+      color: green;
+  }
+
+  .line {
+      border-bottom: 2px solid #292b2c;
+  }

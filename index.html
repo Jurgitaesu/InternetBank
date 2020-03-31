@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Internet Bank</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid py-5 cover-photo">
+            <h1 class="pt-5 text-success text-center">Internet Bank</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="text-center my-3">Operation</h2>
+            <div class="border border-dark rounded bg-light py-3">
+                <form action="#">
+                    <div class="form-group">
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <input type="number" class="form-control" id="input" min="1" placeholder="Please enter amount">
+                            </div>
+                            <div class="col-3">
+                                <select class="form-control" name="selection" id="select" required>
+                                    <option value="" selected disabled>--Select operation--</option>
+                                    <option value="add">Add cash</option>
+                                    <option value="withdraw">Withdraw cash</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mx-auto py-4">
+                                <p>Your current balance:&nbsp;<span id="totalBalance" class="font-weight-bold"></span>&nbsp;Eur.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="col-3 btn btn-dark mb-2 mx-auto" id="btn">Submit</button></div>
+                    </div>
+                </form>
+            </div>
+            <h5 class="text-center my-5">Ope<span class="line pb-2">rations</span> lists</h5>
+            <div class="row my-4 justify-content-center">
+                <div class="col-4 text-center">
+                    <input class="form-check-input" type="checkbox" id="operationsHistory">
+                    <label class="form-check-label">List all operations</label>
+                    <ul id="operationsList" class="list-unstyled">
+                    </ul>
+                </div>
+                <div class="col-4 text-center">
+                    <input class="form-check-input" type="checkbox" id="filter-added">
+                    <label class="form-check-label">Filter only added amounts</label>
+                    <br>
+                    <ul id="addedList" class="list-unstyled">
+                    </ul>
+                </div>
+                <div class="col-4 text-center">
+                    <input class="form-check-input" type="checkbox" id="filter-withdrawn">
+                    <label class="form-check-label">Filter only withdrawals</label>
+                    <br>
+                    <ul id="withdrawalsList" class="list-unstyled">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-light py-5">
+            <div class="mx-auto">
+                <h5 class="text-center mb-5">Search <span class="line pb-2">for ope</span>rations</h5>
+            </div>
+            <div class="row">
+                <div class="col-3 mx-auto">
+                    <input type="text" class="form-control my-2" id="inputSearch" placeholder="Please enter amount (e.g. 100, -100)">
+                    <ul id="searchList" class="list-unstyled">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <h5 class="text-center my-5">Sort a<span class="line pb-2">ll opera</span>tions</h5>
+            <div class="row justify-content-center py-3">
+                <div class="col-3 text-center">
+                    <button id="sortAscendingBtn" class="btn btn-dark mx-auto">Sort amounts ascending</button>
+                </div>
+                <div class="col-3 text-center">
+                    <button id="sortDescendingBtn" class="btn btn-dark mx-auto">Sort amounts descending</button>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <ul id="sortList" class="list-unstyled">
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
